@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Інфографіка Компанії</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 600px;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .circle-container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      animation: rotate 60s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .direction {
+      position: absolute;
+      width: 130px;
+      height: 80px;
+      background-color: #ffffff;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .direction:hover {
+      background-color: #0078D4;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    /* Розміщення по колу */
+    .direction:nth-child(1) { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+    .direction:nth-child(2) { top: 18%; left: 85%; transform: translate(-50%, -50%); }
+    .direction:nth-child(3) { top: 55%; left: 100%; transform: translate(-50%, -50%); }
+    .direction:nth-child(4) { bottom: 0%; left: 50%; transform: translate(-50%, 50%); }
+    .direction:nth-child(5) { top: 55%; left: 0%; transform: translate(-50%, -50%); }
+    .direction:nth-child(6) { top: 18%; left: 15%; transform: translate(-50%, -50%); }
+
+    .center-news {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .center-news h3 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .center-news ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .center-news li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="circle-container">
+      <a href="#" class="direction">Все про Компанію</a>
+      <a href="#" class="direction">Інфо про співробітників</a>
+      <a href="#" class="direction">Інфо про структуру</a>
+      <a href="#" class="direction">Новини по Компанії</a>
+      <a href="#" class="direction">WiKi</a>
+      <a href="#" class="direction">HelpDesk</a>
+
+      <div class="center-news">
+        <h3>Останні новини</h3>
+        <ul>
+          <li>🔹 Відкрито новий офіс у Львові</li>
+          <li>🔹 Зміни в керівництві департаменту</li>
+          <li>🔹 Запуск нової ERP-системи</li>
+          <li>🔹 Участь у галузевій конференції</li>
+          <li>🔹 Нові партнери в Європі</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
